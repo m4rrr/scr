@@ -1,3 +1,3 @@
 #!/bin/bash
 pass="$1"
-find $pass -name "??*" | sort | tee 1.txt
+find $pass -regextype posix-extended -regex '.{2,}' | sort | tee 1.txt
